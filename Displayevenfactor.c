@@ -1,10 +1,5 @@
-//write a program which accepts number from user and print even factors of that number
-//input : 24
-//output : 1 2 4 6 8 12
-
-
 #include<stdio.h>
-void DisplayFactor(int iNo)
+void DisplayEvenFactor(int iNo)
 {
 	int i = 0;
 	
@@ -31,7 +26,7 @@ int main()
 	printf("Enter Number\n");
 	scanf("%d",&iValue);
 	
-	DisplayFactor(iValue);
+	DisplayEvenFactor(iValue);
 	
 	return 0;
 }

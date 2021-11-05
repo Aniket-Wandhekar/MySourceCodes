@@ -1,39 +1,36 @@
+//write a program which accepts one number from user and print that number of even numbers on screen
+//Input : 7
+//output : 2 4 6 8 10 12 14        
+
 #include<stdio.h>
-#define TRUE 1
-#define FALSE 0
-
-typedef int BOOL;
-
-BOOL ChkEven(int iNo)
+void PrintEven(int iNo)
 {
-	if((iNo%2)== 0)
+	int iNum = 0;
+	int iCnt = 0;
+	
+	if(iNo <= 0)
 	{
-		return TRUE;
+		return;
 	}
-	else
+	
+	for(iCnt = 1;iCnt <= iNo;iCnt++)
 	{
-		return FALSE;
+		iNum = iCnt * 2;
+		printf("%d\t",iNum);
 	}
+	
 }
+
 int main()
 {
 	int iValue = 0;
-	BOOL bRet = FALSE;
 	
 	printf("Enter Number\n");
 	scanf("%d",&iValue);
 	
-	bRet= ChkEven(iValue);
-	
-	if(bRet== TRUE)
-	{
-		printf("Number is Even");
-	}
-	else
-	{
-		printf("Number is Not Even");
-	}
+	PrintEven(iValue);
 	return 0;
 }
 
-		
+
+
